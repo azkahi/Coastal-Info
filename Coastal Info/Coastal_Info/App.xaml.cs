@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
@@ -13,7 +14,14 @@ namespace Coastal_Info
         {
             InitializeComponent();
 
-            MainPage = new Coastal_Info.MainPage();
+            MainPage = new Views.SplashPage();
+            WaitSplash();
+        }
+
+        private async void WaitSplash()
+        {
+            await Task.Delay(2000);
+            MainPage = new Views.MainPage();
         }
 
         protected override void OnStart()

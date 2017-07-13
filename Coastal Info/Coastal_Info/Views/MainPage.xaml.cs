@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Coastal_Info
+namespace Coastal_Info.Views
 {
     public partial class MainPage : ContentPage
     {
