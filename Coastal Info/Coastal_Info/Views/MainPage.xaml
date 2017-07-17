@@ -2,10 +2,44 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Coastal_Info"
-             x:Class="Coastal_Info.Views.MainPage">
+             x:Class="Coastal_Info.Views.MainPage"
+             BackgroundColor="LightBlue">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" >
+            <Image Source="Logo.png" Margin="30,30,30,0" HorizontalOptions="Center" />
+            <Image Source="Indonesia.png" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" />
+        
+            <StackLayout Orientation="Horizontal" Padding="20,-25,20,0">
+                <Label Text="Region:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
+                <Picker x:Name="RegionPicker" Title="Region" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
 
+            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                <Label Text="Station:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
+                <Picker x:Name="StationPicker" Title="Station" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                <Label Text="Date Start:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
+                <DatePicker x:Name="DateStartPicker" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                <Label Text="Date End:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
+                <DatePicker x:Name="DateEndPicker" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
+                <Label Text="Prediction:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
+                <Picker x:Name="PredictionPicker" Title="Prediction" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="0,20,0,20">
+                <Button Text="Search" FontSize="25" Clicked="SearchButton" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <Image Source="Footer.png" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
