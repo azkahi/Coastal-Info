@@ -7,33 +7,45 @@
 
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" >
-            <Image Source="Logo.png" Margin="30,30,30,0" HorizontalOptions="Center" />
+            <Image Source="Logo.png" Margin="30,10,30,5" HorizontalOptions="Center" />
             <Image Source="Indonesia.png" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" />
-        
-            <StackLayout Orientation="Horizontal" Padding="20,-25,20,0">
-                <Label Text="Region:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
-                <Picker x:Name="RegionPicker" Title="Region" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
-            </StackLayout>
 
-            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
-                <Label Text="Station:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
-                <Picker x:Name="StationPicker" Title="Station" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
+            <Grid ColumnSpacing="0" Padding="30,0,30,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*" />
+                    <RowDefinition Height="0.2*" />
+                    <RowDefinition Height="0.2*" />
+                    <RowDefinition Height="0.2*" />
+                    <RowDefinition Height="0.2*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.05*" />
+                    <ColumnDefinition Width="0.65*" />
+                </Grid.ColumnDefinitions>
 
-            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
-                <Label Text="Date Start:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
-                <DatePicker x:Name="DateStartPicker" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
+                <Label Text="Region" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" />
+                <Label Text=":" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" />
+                <Picker x:Name="RegionPicker" Title="Region" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2" />
 
-            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
-                <Label Text="Date End:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
-                <DatePicker x:Name="DateEndPicker" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
+                <Label Text="Station" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" />
+                <Label Text=":" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" />
+                <Picker x:Name="StationPicker" Title="Station" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="2" />
 
-            <StackLayout Orientation="Horizontal" Padding="20,0,20,0">
-                <Label Text="Prediction:" FontSize="20" TextColor="Black" HorizontalOptions="Start"  VerticalOptions="Center" />
-                <Picker x:Name="PredictionPicker" Title="Prediction" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-            </StackLayout>
+
+                <Label Text="Date Start" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="2" Grid.Column="0" />
+                <Label Text=":" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="2" Grid.Column="1" />
+                <DatePicker x:Name="DateStartPicker" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="2" />
+
+                <Label Text="Region" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="3" Grid.Column="0" />
+                <Label Text=":" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="3" Grid.Column="1" />
+                <DatePicker x:Name="DateEndPicker" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="3" Grid.Column="2" />
+
+                <Label Text="Region" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="4" Grid.Column="0" />
+                <Label Text=":" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="4" Grid.Column="1" />
+                <Picker x:Name="PredictionPicker" Title="Prediction" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="4" Grid.Column="2" />
+
+            </Grid>
 
             <StackLayout Orientation="Horizontal" Padding="0,20,0,20">
                 <Button Text="Search" FontSize="25" Clicked="SearchButton" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />

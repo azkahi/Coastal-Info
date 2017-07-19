@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="CoastalAinfo.CoastalAinfo" android:versionCode="1" android:versionName="Testing">
 	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="Coastal_Info.Android"></application>
+	<application android:label="Coastal Info" android:icon="@drawable/Logo"></application>
 </manifest>

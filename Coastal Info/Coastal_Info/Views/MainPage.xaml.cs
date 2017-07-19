@@ -62,17 +62,17 @@ namespace Coastal_Info.Views
         {
             if (RegionPicker.SelectedIndex == -1)
             {
-                await DisplayAlert("Region Not Selected", "Please select a region.", "Ok");
+                await DisplayAlert("No region selected", "Please choose a region.", "Ok");
                 return;
             }
             if (StationPicker.SelectedIndex == -1)
             {
-                await DisplayAlert("Station Not Selected", "Please select a station.", "Ok");
+                await DisplayAlert("No station selected", "Please choose a station.", "Ok");
                 return;
             }
             if (StationPicker.SelectedIndex == -1)
             {
-                await DisplayAlert("Prediction Not Selected", "Please select a prediction.", "Ok");
+                await DisplayAlert("No prediction selected", "Please choose a prediction.", "Ok");
                 return;
             }
 
@@ -93,9 +93,9 @@ namespace Coastal_Info.Views
                 coastalData.Prediction = false;
             }
 
-            ResultPage resultPage = new ResultPage();
-            resultPage.BindingContext = coastalData;
-            await Navigation.PushModalAsync(resultPage);
+            var resultTabPage = new ResultTabPage();
+            resultTabPage.Children[0].BindingContext = coastalData;
+            await Navigation.PushModalAsync(resultTabPage);
         }
     }
 }
